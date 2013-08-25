@@ -1,0 +1,27 @@
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+<div class="twelve columns centered">
+  <h2>Anmelden</h2>
+  <form action="{% url "login" %}" method="POST" id="login_form">
+    {% csrf_token %}
+    <div class="row">
+      <fieldset class="six columns centered">
+        <legend>Anmeldedaten</legend>
+        <ul>
+          <li class="field">
+            {% render_field form.username class+="text input" placeholder=form.username.label %}
+          </li>
+          <li class="field">
+            {% render_field form.password class+="password input" placeholder=form.password.label %}
+          </li>
+        </ul>
+        <div class="medium default btn"><input type="submit" value="Anmelden" /></div>
+      </fieldset>
+    </div>
+  </form>
+  <div class="row">
+    <p>Du hast noch kein Konto? Bitte kontaktiere den Pizzabeauftragten, er wird dir gerne eines einrichten.</p>
+  </div>
+</div>
+<script src="{% static "js/login.js" %}"></script>

@@ -1,3 +1,6 @@
 [submodule "pizza/static/gumby"]
 	path = pizza/static/gumby
 	url = git@github.com:GumbyFramework/Gumby.git
+[submodule "pizza/static/history.js"]
+	path = pizza/static/history.js
+	url = https://github.com/browserstate/history.js.git
